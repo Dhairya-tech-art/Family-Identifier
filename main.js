@@ -3,8 +3,7 @@ function setup(){
     canvas.center();
     video = createCapture(VIDEO);
     video.hide();
-    classifier=ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/zA8EPig4P/model.json',modelLoaded)
-}
+    classifier=ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/ma1QM8b5t/model.json',modelLoaded)
 
 function modelLoaded(){
     console.log('modelLoaded!');
@@ -23,4 +22,5 @@ function gotResult(error, results){
         document.getElementById("result_object_name").innerHTML= results[0].label;
         document.getElementById("result_object_accuracy").innerHTML= results[0].confidence.toFixed(3);
     }
+}
 }
